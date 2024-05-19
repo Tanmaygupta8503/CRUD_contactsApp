@@ -1,0 +1,119 @@
+/* General styles for the entire app */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  height: 100%; /* Ensure the html and body take full height */
+}
+
+/* Flex container for centering content */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Flex container for the main content */
+.main-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  padding: 20px;
+}
+
+/* Container for the main content */
+.container {
+  max-width: 800px;
+  width: 100%;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Toast container customization */
+.Toastify__toast-container {
+  width: auto;
+}
+
+.Toastify__toast {
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.Toastify__toast--info {
+  background: #4284f5;
+}
+
+.Toastify__toast--success {
+  background: #28a745;
+}
+
+.Toastify__toast--warning {
+  background: #ffc107;
+}
+
+.Toastify__toast--error {
+  background: #dc3545;
+}
+
+/* Header specific styles */
+.header {
+  overflow: hidden;
+  background-color: #f1f1f1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.header .logo {
+  font-size: 25px;
+  font-weight: bold;
+  color: #4284f5;
+  margin: 0;
+}
+
+.header-right p {
+  margin: 0 10px;
+  color: black;
+  text-align: center;
+  padding: 10px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 15px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.header-right p:hover {
+  background-color: #ddd;
+  color: #5d6770;
+}
+
+.header-right p.active {
+  background-color: dodgerblue;
+  color: white;
+}
+
+@media screen and (max-width: 500px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header-right {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .header-right p {
+    width: 100%;
+    text-align: center;
+    margin: 5px 0;
+  }
+}
